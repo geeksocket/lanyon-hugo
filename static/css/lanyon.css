@@ -327,6 +327,32 @@ a.sidebar-nav-item:focus {
   margin-top: -.5rem;
   margin-bottom: 1rem;
   color: #9a9a9a;
+  font-size: 0.87rem;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+}
+
+.post-info {
+  color: #9a9a9a;
+  font-size: 0.87rem;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+}
+
+/* Remove last comma from last tag */
+.post-info a:not(:last-child):after {
+  content: ","
+}
+
+/* author name */
+.author-info {
+    float: right;
+    padding-top: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .author-info {
+    display: block;
+    float: none;
+  }
 }
 
 /* Related posts */
