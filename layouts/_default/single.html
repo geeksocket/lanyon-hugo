@@ -16,18 +16,18 @@
   <hr>
 
   {{- if .Params.tags }}
-  <span class="post-info">
-    Tags:
+  <span class="post-info">Tags: </span>
+  <p class="post-info post-tags">
     {{- range .Params.tags }}
     <a href="/tags/{{ . | lower | urlize }}">{{ . }}</a>
     {{- end }}
-  </span>
+  </p>
   {{ end -}}
 
   {{- if .Params.author }}
-  <span class="post-info author-info">
+  <p class="post-info author-info">
     Post by {{ .Params.author }}
-  </span>
+  </p>
   {{ end -}}
 
   {{- if .Site.DisqusShortname }}

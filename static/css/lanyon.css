@@ -332,9 +332,15 @@ a.sidebar-nav-item:focus {
 }
 
 .post-info {
+  display: inline-block;
+  vertical-align: top;
   color: #9a9a9a;
   font-size: 0.87rem;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
+}
+
+.post-tags {
+  max-width: 60%;
 }
 
 /* Remove last comma from last tag */
@@ -344,14 +350,19 @@ a.sidebar-nav-item:focus {
 
 /* author name */
 .author-info {
-    float: right;
-    padding-top: 0.2rem;
+  float: right;
+  max-width: 30%;
 }
 
 @media (max-width: 768px) {
+  .post-tags {
+    max-width: 90%;
+  }
+
   .author-info {
     display: block;
     float: none;
+    max-width: 100%;
   }
 }
 
