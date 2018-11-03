@@ -4,16 +4,19 @@
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
     {{ template "_internal/google_analytics_async.html" . }}
 
+    <hr>
     <!-- footer -->
     <div>
-      <!-- Policy | Disclaimer -->
-
       <div class="copyright">
         <label>
           Copyright © {{ .Site.Params.copyright }}
           <a href="/">{{ .Site.Params.title }}</a>.
           Published with Hugo.
         </label>
+	<label>
+	  <a href="#">Privacy Policy</a> |
+	  <a href="#">DMCA Disclaimer</a>
+	<label>
       </div>
     </div>
   </body>
