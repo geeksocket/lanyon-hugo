@@ -9,14 +9,15 @@
     <div>
       <div class="copyright">
         <label>
-          Copyright © {{ .Site.Params.copyright }}
-          <a href="/">{{ .Site.Params.title }}</a>.
+          {{ .Site.Params.copyright.text | default "Copyright ©" }}
+          {{ .Site.Params.copyright.year | default .Site.LastChange.Year }}
+          <a href="{{ .Site.BaseURL }}">{{ .Site.Params.title }}</a>.
           Published with Hugo.
         </label>
-	<label>
-	  <a href="#">Privacy Policy</a> |
-	  <a href="#">DMCA Disclaimer</a>
-	<label>
+        <label>
+          <a href="#">Privacy Policy</a> |
+          <a href="#">DMCA Disclaimer</a>
+        <label>
       </div>
     </div>
   </body>
