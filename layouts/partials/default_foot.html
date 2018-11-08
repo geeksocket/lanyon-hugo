@@ -9,17 +9,18 @@
     <div>
       <div class="copyright">
         <label>
-          {{ if .Site.Copyright }}
-            {{ .Site.Copyright }}
-          {{ else }}
-            {{ printf "Copyright © %d %s." .Site.LastChange.Year .Site.Title }}
-          {{ end }}
+	  {{ if .Site.Copyright }}{{ .Site.Copyright }}{{ else }}{{ printf "Copyright © %d %s." .Site.LastChange.Year .Site.Title }}{{ end }}
           Published with Hugo.
         </label>
-        <label>
-          <a href="#">Privacy Policy</a> |
-          <a href="#">DMCA Disclaimer</a>
-        <label>
+	<label>
+	  {{- $firstLink := "true" }}
+	  {{- range .Site.Pages.ByWeight }}
+	  {{- if isset .Params "footer" }}
+	    {{- if eq "false" $firstLink }} | {{ else }}{{ $firstLink = "false" }}{{ end }}
+	    <a href="{{ .Permalink }}">{{ .Param "footer.title" | default .Title }}</a>
+	  {{ end -}}
+	  {{ end -}}
+	</label>
       </div>
     </div>
   </body>
