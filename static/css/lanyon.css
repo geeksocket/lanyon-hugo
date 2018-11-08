@@ -354,6 +354,14 @@ a.sidebar-nav-item:focus {
   max-width: 30%;
 }
 
+.copyright {
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  color: #9a9a9a;
+  font-size: 0.75rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 768px) {
   .post-tags {
     max-width: 90%;

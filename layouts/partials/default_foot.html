@@ -3,5 +3,24 @@
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
     {{ template "_internal/google_analytics_async.html" . }}
+
+    <hr>
+    <!-- footer -->
+    <div>
+      <div class="copyright">
+        <label>
+          {{ if .Site.Copyright }}
+            {{ .Site.Copyright }}
+          {{ else }}
+            {{ printf "Copyright © %d %s." .Site.LastChange.Year .Site.Title }}
+          {{ end }}
+          Published with Hugo.
+        </label>
+        <label>
+          <a href="#">Privacy Policy</a> |
+          <a href="#">DMCA Disclaimer</a>
+        <label>
+      </div>
+    </div>
   </body>
 </html>
